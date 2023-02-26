@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
 mongoose.set('strictQuery', false)
-const connection = mongoose.connect('mongodb+srv://Vishalsingh007:vishalsingh@cluster0.8bjxabo.mongodb.net/testAuth?retryWrites=true&w=majority')
+require('dotenv').config()
+
+const connection = mongoose.connect(process.env.mongoURL)
 
 module.exports = {
     connection
