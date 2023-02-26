@@ -3,6 +3,8 @@ const cors = require("cors");
 const { connection } = require("./Config/db");
 const { userRouter } = require("./Routes/user.Roter");
 const { passport } = require("./Config/google-oauth");
+const { postman } = require('./Routes/postman.router')
+
 require("dotenv").config()
 const app = express();
 const path = require("path");
@@ -13,6 +15,7 @@ const filePath = path.join(
   "index.html"
 );
 app.use(cors());
+app.use(postman);
 // app.use(express.static(__dirname +   "..",
 // "Frontend",
 // "signup&login",
