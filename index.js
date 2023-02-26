@@ -15,6 +15,7 @@ const filePath = path.join(
   "index.html"
 );
 app.use(cors());
+app.use(express.json())
 app.use(postman);
 // app.use(express.static(__dirname +   "..",
 // "Frontend",
